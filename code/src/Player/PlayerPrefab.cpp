@@ -234,7 +234,7 @@ void PlayerPrefabFactory::addRigidBody(GameObject* gameObject)
 	rigidBody->setCanRotate(true);
 	rigidBody->setHasGravity(false);
 	rigidBody->setIsMoveableByForce(true);
-	rigidBody->setDensity(1.0f);
+	rigidBody->setDensity(10.0f);
 	rigidBody->setFriction(0.6f);
 	rigidBody->setRestitution(0.0f);
 	rigidBody->setGravityScale(0.0f);
@@ -252,14 +252,14 @@ void PlayerPrefabFactory::addCollider(GameObject* gameObject)
 	boxCollider->setHeight(firstFramePlayerIdleFront.height);
 
 	BoxCollider* boxCollider2 = new BoxCollider();
-	boxCollider2->setWidth(10);
-	boxCollider2->setHeight(15);
+	boxCollider2->setWidth(5);
+	boxCollider2->setHeight(10);
 
 	BoxCollider* boxCollider3 = new BoxCollider();
-	boxCollider3->setWidth(15);
-	boxCollider3->setHeight(10);
+	boxCollider3->setWidth(10);
+	boxCollider3->setHeight(5);
 	Transform transform2;
-	transform2.position.x = 10;
+	transform2.position.x = 5;
 	transform2.position.y = 10;
 
 	boxCollider3->setTransform(transform2);
@@ -268,10 +268,10 @@ void PlayerPrefabFactory::addCollider(GameObject* gameObject)
 	circleCollider->setRadius(10);
 
 	Transform transform;
-	transform.position.x = 15;
+	transform.position.x = 5;
 	transform.position.y = 10;
 
-	// boxCollider2->setTransform(transform);
+	boxCollider2->setTransform(transform);
 
 	gameObject->addComponent(boxCollider3);
 	gameObject->addComponent(boxCollider2);
