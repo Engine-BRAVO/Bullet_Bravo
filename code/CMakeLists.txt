@@ -6,6 +6,8 @@ project(BulletBravo)
 # Set the C++ standard
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 
 # Add an option to enable debug mode
 option(ENABLE_DEBUG "Enable debug mode" OFF)

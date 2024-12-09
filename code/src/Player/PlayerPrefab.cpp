@@ -231,14 +231,14 @@ void PlayerPrefabFactory::addRigidBody(GameObject* gameObject)
 {
 	RigidBody* rigidBody = new RigidBody();
 
-	rigidBody->setCanRotate(false);
+	rigidBody->setCanRotate(true);
 	rigidBody->setHasGravity(false);
 	rigidBody->setIsMoveableByForce(true);
 	rigidBody->setDensity(1.0f);
 	rigidBody->setFriction(0.6f);
 	rigidBody->setRestitution(0.0f);
 	rigidBody->setGravityScale(0.0f);
-	rigidBody->setMass(5.0f);
+	rigidBody->setMass(1.0f);
 	rigidBody->setLinearDamping(0.5f);
 	rigidBody->setAngularDamping(0.5f);
 
@@ -251,7 +251,32 @@ void PlayerPrefabFactory::addCollider(GameObject* gameObject)
 	boxCollider->setWidth(firstFramePlayerIdleFront.width);
 	boxCollider->setHeight(firstFramePlayerIdleFront.height);
 
-	gameObject->addComponent(boxCollider);
+	BoxCollider* boxCollider2 = new BoxCollider();
+	boxCollider2->setWidth(10);
+	boxCollider2->setHeight(15);
+
+	BoxCollider* boxCollider3 = new BoxCollider();
+	boxCollider3->setWidth(15);
+	boxCollider3->setHeight(10);
+	Transform transform2;
+	transform2.position.x = 10;
+	transform2.position.y = 10;
+
+	boxCollider3->setTransform(transform2);
+
+	CircleCollider* circleCollider = new CircleCollider();
+	circleCollider->setRadius(10);
+
+	Transform transform;
+	transform.position.x = 15;
+	transform.position.y = 10;
+
+	// boxCollider2->setTransform(transform);
+
+	gameObject->addComponent(boxCollider3);
+	gameObject->addComponent(boxCollider2);
+	// gameObject->addComponent(boxCollider2);
+	//  gameObject->addComponent(circleCollider);
 }
 
 void PlayerPrefabFactory::addSound(GameObject* gameObject)

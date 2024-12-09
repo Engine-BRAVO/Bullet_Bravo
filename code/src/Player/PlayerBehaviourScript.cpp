@@ -217,7 +217,8 @@ void PlayerBehaviourScript::handleMovement()
 
 	if (input.GetKey(Key::Key_R))
 	{
-		parentTransform.rotate(1.0f);
+		mGameObject->getComponents<RigidBody>()[0]->addTorque(1000);
+		// parentTransform.rotate(1.0f);
 	}
 	if (input.GetKey(Key::Key_T))
 	{
