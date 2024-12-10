@@ -252,23 +252,40 @@ void PlayerPrefabFactory::addCollider(GameObject* gameObject)
 	boxCollider->setHeight(firstFramePlayerIdleFront.height);
 
 	BoxCollider* boxCollider2 = new BoxCollider();
-	boxCollider2->setWidth(16);
-	boxCollider2->setHeight(25);
+	boxCollider2->setWidth(8);
+	boxCollider2->setHeight(13);
 
 	BoxCollider* boxCollider3 = new BoxCollider();
-	boxCollider3->setWidth(16);
-	boxCollider3->setHeight(25);
+	boxCollider3->setWidth(8);
+	boxCollider3->setHeight(13);
 	Transform transform2;
-	transform2.position.x = 4;
-	transform2.position.y = 4;
-
+	transform2.position.x = 8;
+	transform2.position.y = 0;
 	boxCollider3->setTransform(transform2);
+
+	BoxCollider* boxCollider4 = new BoxCollider();
+	boxCollider4->setWidth(8);
+	boxCollider4->setHeight(12);
+	Transform transform4;
+	transform4.position.x = 0;
+	transform4.position.y = 13;
+	boxCollider4->setTransform(transform4);
+
+	BoxCollider* boxCollider5 = new BoxCollider();
+	boxCollider5->setWidth(4);
+	boxCollider5->setHeight(8);
+	Transform transform5;
+	transform5.position.x = 8;
+	transform5.position.y = 13;
+	boxCollider5->setTransform(transform5);
 
 	CircleCollider* circleCollider = new CircleCollider();
 	circleCollider->setRadius(10);
 
 	gameObject->addComponent(boxCollider3);
 	gameObject->addComponent(boxCollider2);
+	gameObject->addComponent(boxCollider4);
+	gameObject->addComponent(boxCollider5);
 	// gameObject->addComponent(boxCollider2);
 	//  gameObject->addComponent(circleCollider);
 }
