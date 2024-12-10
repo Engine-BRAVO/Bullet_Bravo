@@ -237,8 +237,8 @@ void PlayerPrefabFactory::addRigidBody(GameObject* gameObject)
 	rigidBody->setDensity(1.0f);
 	rigidBody->setFriction(0.6f);
 	rigidBody->setRestitution(0.0f);
-	rigidBody->setGravityScale(0.0f);
-	rigidBody->setMass(1.0f);
+	rigidBody->setGravityScale(1.0f);
+	rigidBody->setMass(10.0f);
 	rigidBody->setLinearDamping(0.5f);
 	rigidBody->setAngularDamping(0.5f);
 
