@@ -76,7 +76,7 @@ void DemoManagerBehaviourScript::createFirstScene()
 
 	// defaultPlayerPrefab->setTransform(Transform(Vector2(40, 40)));
 
-	defaultPlayerPrefab->setTransform(Transform(Vector2(40, 40)));
+	defaultPlayerPrefab->setTransform(Transform(Vector2(40, 90)));
 
 	scene->addPersistentGameObject(defaultPlayerPrefab);
 

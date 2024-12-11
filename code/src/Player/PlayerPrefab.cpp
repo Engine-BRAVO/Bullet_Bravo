@@ -252,12 +252,12 @@ void PlayerPrefabFactory::addCollider(GameObject* gameObject)
 	boxCollider->setHeight(firstFramePlayerIdleFront.height);
 
 	BoxCollider* boxCollider2 = new BoxCollider();
-	boxCollider2->setWidth(16);
-	boxCollider2->setHeight(25);
+	boxCollider2->setWidth(8);
+	boxCollider2->setHeight(13);
 
 	BoxCollider* boxCollider3 = new BoxCollider();
-	boxCollider3->setWidth(16);
-	boxCollider3->setHeight(25);
+	boxCollider3->setWidth(8);
+	boxCollider3->setHeight(13);
 	Transform transform2;
 	transform2.position.x = 4;
 	transform2.position.y = 4;

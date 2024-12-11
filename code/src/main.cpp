@@ -1,5 +1,6 @@
 #include <iostream>
 
+#include "PlayerPrefab.h"
 #include "SplashScreenBehaviourScript.h"
 #include <EngineBravo.h>
 #include <GameObject.h>
@@ -34,8 +35,26 @@ void init()
 	return;
 }
 
+void test()
+{
+	World world(Vector2(0, 10));
+
+	GameObject* playerObject = PlayerPrefabFactory::createPlayerPrefab();
+
+	BodyProxy bodyProxy(*playerObject);
+	BodyID playerBodyID = world.createBody(bodyProxy);
+
+	for (int i = 0; i < 100; i++)
+	{
+		world.executeWorldStep(1, 40);
+		std::cout << "Player position: " << world.getPosition(playerBodyID).x << ", "
+				  << world.getPosition(playerBodyID).y << std::endl;
+	}
+}
+
 int main()
 {
 	init();
+	// test();
 	return 0;
 }
